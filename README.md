@@ -78,6 +78,12 @@ docker compose exec api python manage.py migrate
 # Crear nuevas migraciones tras cambiar modelos
 docker compose exec api python manage.py makemigrations
 
+# Cargar datos de prueba (omite si ya existen)
+docker compose exec api python manage.py seed
+
+# Cargar datos de prueba (borra todo y vuelve a insertar)
+docker compose exec api python manage.py seed --flush
+
 # Abrir shell de Django
 docker compose exec api python manage.py shell
 

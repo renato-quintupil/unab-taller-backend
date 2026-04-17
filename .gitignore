@@ -1,0 +1,56 @@
+# ─── Variables de entorno ───────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ─── Entorno virtual ────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ─── Django ─────────────────────────────────────────────────────────────────
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static_root/
+
+# ─── Docker ─────────────────────────────────────────────────────────────────
+# No ignorar docker-compose.yml ni Dockerfile (son parte del proyecto)
+# Ignorar overrides locales
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ─── IDEs y editores ────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Sistema operativo ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Logs ───────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Coverage / Testing ─────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/

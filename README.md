@@ -16,7 +16,7 @@ API REST construida con Django + Django REST Framework y PostgreSQL, containeriz
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <url-del-repo>
+git clone <https://github.com/renato-quintupil/unab-taller-backend.git>
 cd unab-taller-backend
 ```
 
@@ -35,6 +35,7 @@ docker compose up --build
 ```
 
 Esto levanta dos servicios:
+
 - `db` — PostgreSQL 15 en el puerto `5432`
 - `api` — Django en el puerto `8000` (aplica migraciones automáticamente al iniciar)
 
@@ -52,15 +53,15 @@ Deberías ver el explorador de la API de DRF con los endpoints disponibles.
 
 ## Endpoints disponibles
 
-| Recurso       | URL                        | Métodos              |
-|---------------|----------------------------|----------------------|
-| Restaurantes  | `/api/restaurantes/`       | GET, POST            |
-| Restaurante   | `/api/restaurantes/{id}/`  | GET, PUT, PATCH, DELETE |
-| Productos     | `/api/productos/`          | GET, POST            |
-| Producto      | `/api/productos/{id}/`     | GET, PUT, PATCH, DELETE |
-| Pedidos       | `/api/pedidos/`            | GET, POST            |
-| Pedido        | `/api/pedidos/{id}/`       | GET, PUT, PATCH, DELETE |
-| Admin         | `/admin/`                  | —                    |
+| Recurso      | URL                       | Métodos                 |
+| ------------ | ------------------------- | ----------------------- |
+| Restaurantes | `/api/restaurantes/`      | GET, POST               |
+| Restaurante  | `/api/restaurantes/{id}/` | GET, PUT, PATCH, DELETE |
+| Productos    | `/api/productos/`         | GET, POST               |
+| Producto     | `/api/productos/{id}/`    | GET, PUT, PATCH, DELETE |
+| Pedidos      | `/api/pedidos/`           | GET, POST               |
+| Pedido       | `/api/pedidos/{id}/`      | GET, PUT, PATCH, DELETE |
+| Admin        | `/admin/`                 | —                       |
 
 ---
 

@@ -1,5 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from .models import Restaurante, Producto
 from .serializers import (
@@ -9,8 +10,9 @@ from .serializers import (
 )
 
 
-class RestauranteViewSet(viewsets.ReadOnlyModelViewSet):
+class RestauranteViewSet(viewsets.ModelViewSet):
     queryset = Restaurante.objects.all()
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get_serializer_class(self):
         if self.action == 'retrieve':

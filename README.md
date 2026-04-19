@@ -22,8 +22,10 @@ cd unab-taller-backend
 
 ### 2. Configurar variables de entorno
 
+cmd
+
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
 Edita `.env` si necesitas cambiar algún valor. Para desarrollo local los valores por defecto funcionan sin modificaciones.
@@ -53,8 +55,28 @@ Deberías ver el explorador de la API de DRF con los endpoints disponibles.
 
 ## Endpoints disponibles
 
-| Recurso      | URL                       | Métodos                 |
-| ------------ | ------------------------- | ----------------------- |
+| Método | URL | Descripción |
+|--------|-----|-------------|
+| `GET` | `/api/restaurantes/` | Lista todos los restaurantes |
+| `GET` | `/api/restaurantes/{id}/` | Detalle de restaurante + menú |
+| `GET` | `/api/restaurantes/{id}/productos/` | Productos del restaurante |
+| `GET` | `/api/productos/` | Lista todos los productos |
+| `GET` | `/api/productos/{id}/` | Detalle de producto |
+| `POST` | `/api/pedidos/` | Crear nuevo pedido |
+| `GET` | `/api/pedidos/{id}/` | Detalle de pedido |
+| `GET` | `/admin/` | Panel de administración |
+
+--------|-----|-------------|
+| `GET` | `/api/restaurantes/` | Lista todos los restaurantes |
+| `GET` | `/api/restaurantes/{id}/` | Detalle de restaurante + menú |
+| `GET` | `/api/restaurantes/{id}/productos/` | Productos del restaurante |
+| `GET` | `/api/productos/` | Lista todos los productos |
+| `GET` | `/api/productos/{id}/` | Detalle de producto |
+| `POST` | `/api/pedidos/` | Crear nuevo pedido |
+| `GET` | `/api/pedidos/{id}/` | Detalle de pedido |
+| `GET` | `/admin/` | Panel de administración |
+
+------------ | ------------------------- | ----------------------- |
 | Restaurantes | `/api/restaurantes/`      | GET, POST               |
 | Restaurante  | `/api/restaurantes/{id}/` | GET, PUT, PATCH, DELETE |
 | Productos    | `/api/productos/`         | GET, POST               |
